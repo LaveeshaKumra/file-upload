@@ -1,0 +1,26 @@
+<table border = "1" cellpadding="7" cellspacing="7">
+	<tr>
+		<th>No</th>
+		<th>UserName</th>
+		<th>Password</th>
+		<th>Image</th>
+		
+	</tr>
+	<%if(data.length){
+		for(var i=0;i<data.length;i++){ %>
+		<tr>
+			<td><%=(i+1)%></td>
+			<td><%=data[i].username%></td>
+			<td><%=data[i].password%></td>
+			<td><img src="/../uploads/<%=data[i].image%>" width=100 height=100></td>
+			
+		</tr>
+	<% }
+	}else{ %>
+	<tr>
+		<td colspan="3"> NO User FOund</td>
+	</tr>
+	
+	<% } %>
+</table>
+
